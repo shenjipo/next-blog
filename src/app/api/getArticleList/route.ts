@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
         if (!a.createTime || !b.createTime) {
             return 1
         }
-        return b.createTime - a.createTime
+        return parseInt(b.createTime) - parseInt(a.createTime)
     })
     return NextResponse.json(articleList, { status: 200 });
 }
