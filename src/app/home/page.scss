@@ -35,6 +35,13 @@
             margin-top: 20px;
             border: 2px solid white;
             border-radius: 10px;
+            .link{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
 }

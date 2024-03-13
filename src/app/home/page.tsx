@@ -22,7 +22,7 @@ export default async function Home() {
                     navList.map(item => {
                         return (
                             <div className='nav-item' key={item.id}>
-                                <Link href={item.url}>{item.name}</Link>
+                                <Link className='link' href={item.url}>{item.name}</Link>
                             </div>
                         )
                     })

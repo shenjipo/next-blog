@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 export async function GET(request: NextRequest) {
 
     // By unique identifier
-    
+
     let articleList = await prisma.article.findMany({
         where: {
             author: 'wangxing',
@@ -20,6 +20,11 @@ export async function GET(request: NextRequest) {
         }
     })
 
-
+    articleList = articleList.sort((a, b) => {
+        if (!a.createTime || !b.createTime) {
+            return 1
+        }
+        return b.createTime - a.createTime
+    })
     return NextResponse.json(articleList, { status: 200 });
 }

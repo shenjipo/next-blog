@@ -18,7 +18,7 @@ export function NavButton({ children }: { children: React.ReactNode }) {
     useEffect(() => {
         setPosition({
             x: window.screen.width / 2,
-            y: window.screen.height / 4,
+            y: window.screen.height / 2,
         });
 
         setIsMobile('ontouchstart' in window.document.documentElement)
