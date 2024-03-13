@@ -1,0 +1,16 @@
+.nav {
+    .nav-button {
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        z-index: 20;
+        cursor: pointer;
+        width: 50px;
+        background-color: #BEDAFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 5px;
+    }
+}

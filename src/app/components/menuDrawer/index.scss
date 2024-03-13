@@ -1,0 +1,47 @@
+// PC
+@media screen and (min-width: 1200px) {
+    .drawer {
+        width: 40vw;
+
+        .menu-item {
+            font-size: 1rem;
+        }
+    }
+}
+
+// mobile
+@media screen and (max-width: 1000px) {
+    .drawer {
+        width: 70vw;
+
+        .menu-item {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+.drawer {
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 1em;
+    position: fixed;
+    background-color: aliceblue;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    z-index: 10;
+    overflow: auto;
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    .menu-item {
+     
+        background-color: #E8F3FF;
+        margin: 10px 0 0 0;
+        border-radius: 5px;
+        padding: 10px;
+    }
+}

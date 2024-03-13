@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model article {
+  id            String  @id @db.VarChar(255)
+  title         String? @db.VarChar(255)
+  content       String? @db.VarChar(9999)
+  author        String? @db.VarChar(255)
+  createTime    String? @db.VarChar(255)
+  updateTime    String? @db.VarChar(255)
+  isPreviewShow String? @db.VarChar(255)
+  author_uuid   String  @db.VarChar(255)
+}
+
+model dashboard {
+  id          Int     @id @default(autoincrement()) @db.UnsignedInt
+  author_uuid String  @db.VarChar(99)
+  create_time String  @db.VarChar(20)
+  update_time String? @db.VarChar(20)
+  custom      String? @db.VarChar(255)
+  card_list   String? @db.Text
+}
+
+model user {
+  uuid       String  @id @db.VarChar(255)
+  account    String  @db.VarChar(255)
+  password   String  @db.VarChar(255)
+  token      String? @db.VarChar(255)
+  createTime String  @db.VarChar(255)
+  updateTime String? @db.VarChar(255)
+}
